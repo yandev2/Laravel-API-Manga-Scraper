@@ -20,66 +20,66 @@ API ini dibangun menggunakan framework **Laravel**, menyediakan antarmuka RESTfu
 #### Terbaru
 
 ```http
-  GET https://manga-api-mu-eight.vercel.app/api/api/terbaru
+  GET https://laravel-api-manga-scraper.vercel.app/api/api/terbaru
 ```
 #### Popular
 
 ```http
-  GET https://manga-api-mu-eight.vercel.app/api/api/popular
+  GET https://laravel-api-manga-scraper.vercel.app/api/api/popular
 ```
 #### berwarna
 
 ```http
-  GET https://manga-api-mu-eight.vercel.app/api/api/berwarna/{pages}
+  GET https://laravel-api-manga-scraper.vercel.app/api/api/berwarna/{pages}
 ```
 
 #### Daftar genre
 
 ```http
-  GET https://manga-api-mu-eight.vercel.app/api/api/genre
+  GET https://laravel-api-manga-scraper.vercel.app/api/api/genre
 ```
 #### By genre
 
 ```http
-  GET https://manga-api-mu-eight.vercel.app/api/api/genre/{genre}/{pages}
+  GET https://laravel-api-manga-scraper.vercel.app/api/api/genre/{genre}/{pages}
 ```
 #### Daftar tema
 
 ```http
-  GET https://manga-api-mu-eight.vercel.app/api/api/theme
+  GET https://laravel-api-manga-scraper.vercel.app/api/api/theme
 ```
 
 #### By tema
 
 ```http
-  GET https://manga-api-mu-eight.vercel.app/api/api/theme/{theme}/{pages}
+  GET https://laravel-api-manga-scraper.vercel.app/api/api/theme/{theme}/{pages}
 ```
 #### Daftar jenis
 
 ```http
-  GET https://manga-api-mu-eight.vercel.app/api/api/jenis
+  GET https://laravel-api-manga-scraper.vercel.app/api/api/jenis
 ```
 #### By jenis
 
 ```http
-  GET https://manga-api-mu-eight.vercel.app/api/api/jenis/{jenis}/{pages}
+  GET https://laravel-api-manga-scraper.vercel.app/api/api/jenis/{jenis}/{pages}
 ```
 #### Detail manga
 
 ```http
-  GET https://manga-api-mu-eight.vercel.app/api/api/detai/{url}
+  GET https://laravel-api-manga-scraper.vercel.app/api/api/detai/{url}
 ```
 
 #### Baca manga
 
 ```http
-  GET https://manga-api-mu-eight.vercel.app/api/api/baca/{url}
+  GET https://laravel-api-manga-scraper.vercel.app/api/api/baca/{url}
 ```
 
 #### Search
 
 ```http
-  GET https://manga-api-mu-eight.vercel.app/api/api/search/{param}
+  GET https://laravel-api-manga-scraper.vercel.app/api/api/search/{param}
 ```
 
 
