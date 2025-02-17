@@ -1,18 +1,18 @@
 
 # Api Komik scraping
 
-Laravel Comic Scraping API is an API designed to retrieve data from various manga and comic websites using web scraping techniques. This API allows users to access information related to comics, such as title, author, illustrator, genre, theme, chapters and synopsis. This data is collected automatically from leading comic sites and can be used to build frontend applications or comic related platforms.
+Laravel Comic Scraping API adalah API yang dirancang untuk mengambil data dari berbagai website manga dan komik menggunakan teknik web scraping. API ini memungkinkan pengguna mengakses informasi terkait komik, seperti judul, pengarang, ilustrator, genre, tema, bab, dan sinopsis. Data ini dikumpulkan secara otomatis dari situs komik terkemuka dan dapat digunakan untuk membangun aplikasi frontend atau platform terkait komik.
 
-This API was built using the **Laravel** framework, providing a RESTful interface that is easy to use and can be integrated with other applications.
+API ini dibangun menggunakan framework **Laravel**, menyediakan antarmuka RESTful yang mudah digunakan dan dapat diintegrasikan dengan aplikasi lain.
 
 ## Fitur
 
-- **Manga Data Scraping**: Retrieves basic information about manga such as title, author, illustrator, synopsis and other related information.
-- **Manga Chapter List**: Get a list of chapters for each manga, complete with links to each chapter.
-- **Manga Search**: Gets a list of related manga from the given parameter query.
-- **Theme & Genre**: Retrieves information about the genre and theme of each manga.
-- **Chapter Navigation**: Provides information about the previous and next chapters of the manga you are reading.
-- **Web Scraping**: The scraping process is carried out to retrieve relevant data from manga and comic sites without requiring an external API.
+- **Scraping Data Manga**: Mengambil informasi dasar tentang manga seperti judul, pengarang, ilustrator, sinopsis, dan informasi terkait lainnya.
+- **Daftar Chapter Manga**: Mendapatkan daftar chapter dari setiap manga, lengkap dengan link ke setiap chapter.
+- **Pencarian Manga**: Mendapatkan daftar manga terkait dari query parameter yang diberikan.
+- **Tema & Genre**: Mengambil informasi tentang genre dan tema dari setiap manga.
+- **Navigasi Chapter**: Menyediakan informasi tentang chapter sebelumnya dan chapter selanjutnya dari manga yang sedang dibaca.
+- **Web Scraping**: Proses scraping dilakukan untuk mengambil data yang relevan dari situs manga dan komik tanpa memerlukan API eksternal.
 
 
 ## API Reference
