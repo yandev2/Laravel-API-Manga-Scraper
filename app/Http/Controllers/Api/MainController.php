@@ -20,14 +20,18 @@ class MainController extends Controller
         $result = $data->each(function (Crawler $v) {
             return [
                 'link' => str_replace('https://komikindo2.com/komik/', '', $v->children('a')->attr('href')),
+                'title' => $v->filter('.tt')->text(),
+                'ratting' => null,
+                'jenis' => $v->filter('.warnalabel')->text(),
+                'view' => null,
+                'type' => $v->filter('.typeflag ')->attr('class'),
+                'status' => null,
+                'chapter' => $v->filter('.lsch')->text(),
+                'last_update' => $v->filter('.datech')->text(),
                 'img' => $v->filter('.limit')->children('img')->count() > 0
                     ? $v->filter('.limit')->children('img')->attr('src')
                     : null,
-                'title' => $v->filter('.tt')->text(),
-                'jenis' => $v->filter('.warnalabel')->text(),
-                'type' => $v->filter('.typeflag ')->attr('class'),
-                'chapter' => $v->filter('.lsch')->text(),
-                'last_update' => $v->filter('.datech')->text(),
+
             ];
         });
         $result = collect($result)->map(function ($v) {
@@ -47,9 +51,6 @@ class MainController extends Controller
         $result = $data->each(function (Crawler $v) {
             return [
                 'link' => str_replace('https://komikindo2.com/komik/', '', $v->filter('.animepostxx-top')->children('a')->attr('href')),
-                'img' => $v->filter('.limietles')->children('img')->count() > 0
-                    ? $v->filter('.limietles')->children('img')->attr('src')
-                    : null,
                 'title' => $v->filter('.tt')->text(),
                 'ratting' => $v->filter('.flex-skroep.nginfo-skroep')->eq(0)->text(),
                 'jenis' => $v->filter('.flex-skroep.nginfo-skroep')->eq(3)->text(),
@@ -57,6 +58,10 @@ class MainController extends Controller
                 'type' => $v->filter('.typeflag ')->attr('class'),
                 'status' => $v->filter('.animepostxx-bottom .flex-skroep.nginfo-skroep')->eq(0)->text(),
                 'chapter' => $v->filter('.animepostxx-bottom .flex-skroep.nginfo-skroep')->eq(1)->filter('.lsch')->eq(0)->text(),
+                'last_update' => null,
+                'img' => $v->filter('.limietles')->children('img')->count() > 0
+                    ? $v->filter('.limietles')->children('img')->attr('src')
+                    : null,
             ];
         });
 
@@ -67,7 +72,6 @@ class MainController extends Controller
 
         return new ArrayResoruce(true, '', $result);
     }
-
 
     public function berwarna($page)
     {
@@ -80,15 +84,17 @@ class MainController extends Controller
         $result = $data->each(function (Crawler $v) {
             return [
                 'link' => str_replace('https://komikindo2.com/komik/', '', $v->children('a')->attr('href')),
+                'title' => $v->filter('.tt')->text(),
+                'ratting' => null,
+                'jenis' => $v->filter('.warnalabel')->text(),
+                'view' => null,
+                'type' => $v->filter('.typeflag ')->attr('class'),
+                'status' => null,
+                'chapter' => $v->filter('.lsch')->children('a')->text(),
+                'last_update' => $v->filter('.datech')->text(),
                 'img' => $v->filter('.limit')->children('img')->count() > 0
                     ? $v->filter('.limit')->children('img')->attr('src')
                     : null,
-                'title' => $v->filter('.tt')->text(),
-                'chapter' => $v->filter('.lsch')->children('a')->text(),
-                'last_update' => $v->filter('.datech')->text(),
-                'jenis' => $v->filter('.warnalabel')->text(),
-                'type' => $v->filter('.typeflag ')->attr('class'),
-
             ];
         });
         $result = collect($result)->map(function ($v) {
@@ -137,13 +143,17 @@ class MainController extends Controller
         $result = $data->each(function (Crawler $v) {
             return [
                 'link' => str_replace('https://komikindo2.com/komik/', '', $v->children('a')->attr('href')),
+                'title' => $v->filter('.tt')->text(),
+                'ratting' => $v->filter('.adds .rating')->text(),
+                'jenis' => null,
+                'view' => null,
+                'type' => $v->filter('.typeflag ')->attr('class'),
+                'status' => null,
+                'chapter' => null,
+                'last_update' => null,
                 'img' => $v->filter('.limit')->children('img')->count() > 0
                     ? $v->filter('.limit')->children('img')->attr('src')
                     : null,
-                'title' => $v->filter('.tt')->text(),
-                'type' => $v->filter('.typeflag ')->attr('class'),
-                'ratting' => $v->filter('.adds .rating')->text(),
-
             ];
         });
 
@@ -175,13 +185,17 @@ class MainController extends Controller
         $result = $data->each(function (Crawler $v) {
             return [
                 'link' => str_replace('https://komikindo2.com/komik/', '', $v->children('a')->attr('href')),
+                'title' => $v->filter('.tt')->text(),
+                'ratting' => $v->filter('.adds .rating')->text(),
+                'jenis' => null,
+                'view' => null,
+                'type' => $v->filter('.typeflag ')->attr('class'),
+                'status' => null,
+                'chapter' => null,
+                'last_update' => null,
                 'img' => $v->filter('.limit')->children('img')->count() > 0
                     ? $v->filter('.limit')->children('img')->attr('src')
                     : null,
-                'title' => $v->filter('.tt')->text(),
-                'type' => $v->filter('.typeflag ')->attr('class'),
-                'ratting' => $v->filter('.adds .rating')->text(),
-
             ];
         });
 
@@ -213,13 +227,17 @@ class MainController extends Controller
         $result = $data->each(function (Crawler $v) {
             return [
                 'link' => str_replace('https://komikindo2.com/komik/', '', $v->children('a')->attr('href')),
+                'title' => $v->filter('.tt')->text(),
+                'ratting' => $v->filter('.adds .rating')->text(),
+                'jenis' => null,
+                'view' => null,
+                'type' => $v->filter('.typeflag ')->attr('class'),
+                'status' => null,
+                'chapter' => null,
+                'last_update' => null,
                 'img' => $v->filter('.limit')->children('img')->count() > 0
                     ? $v->filter('.limit')->children('img')->attr('src')
                     : null,
-                'title' => $v->filter('.tt')->text(),
-                'type' => $v->filter('.typeflag ')->attr('class'),
-                'ratting' => $v->filter('.adds .rating')->text(),
-
             ];
         });
 
@@ -344,7 +362,6 @@ class MainController extends Controller
         return new ArrayResoruce(true, '', $response);
     }
 
-
     public function search($id)
     {
         $url = 'https://komikindo2.com/?s=' . $id;
@@ -354,12 +371,17 @@ class MainController extends Controller
         $result = $data->each(function (Crawler $v) {
             return [
                 'link' => str_replace('https://komikindo2.com/komik/', '', $v->children('a')->attr('href')),
+                'title' => $v->filter('.tt')->text(),
+                'ratting' => $v->filter('.adds .rating')->children('i')->text(),
+                'jenis' => null,
+                'view' => null,
+                'type' => $v->filter('.typeflag ')->attr('class'),
+                'status' => null,
+                'chapter' => null,
+                'last_update' => null,
                 'img' => $v->filter('.limit')->children('img')->count() > 0
                     ? $v->filter('.limit')->children('img')->attr('src')
                     : null,
-                'title' => $v->filter('.tt')->text(),
-                'ratting' => $v->filter('.adds .rating')->children('i')->text(),
-                'type' => $v->filter('.typeflag ')->attr('class'),
             ];
         });
         $result = collect($result)->map(function ($v) {
